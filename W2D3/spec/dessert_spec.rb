@@ -63,7 +63,7 @@ describe Dessert do
 
   describe "#serve" do
     it "contains the titleized version of the chef's name" do
-      expect(dessert.serve.include?(chef.titleize)).to be true
+      expect(dessert.serve).to include(chef.titleize)
     end
   end
 

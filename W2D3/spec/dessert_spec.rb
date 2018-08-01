@@ -57,7 +57,7 @@ describe Dessert do
     end
 
     it "raises an error if the amount is greater than the quantity" do
-      expect { dessert.eat(7) }.to raise_error(StandardError)
+      expect { dessert.eat(7) }.to raise_error("not enough left!")
     end
   end
 

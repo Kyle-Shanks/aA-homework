@@ -21,5 +21,10 @@ class Route < ApplicationRecord
 
   def better_drivers_query
     # TODO: your code here
+    all_buses = self.buses
+
+    all_buses.select("buses.id, string_agg(drivers.name, ', ') AS driver_list")
+    .joins(:drivers)
+    .group(:id)
   end
 end

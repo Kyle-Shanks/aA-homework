@@ -20,5 +20,7 @@ class House < ApplicationRecord
 
   def better_seeds_query
     # TODO: your code here
+    all_plants = self.plants
+    all_plants.select('seeds.*').joins(:seeds)
   end
 end

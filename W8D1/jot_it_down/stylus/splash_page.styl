@@ -1,0 +1,16 @@
+// main: _main.styl
+
+.top-section
+  height 600px
+  background url('img/splash.jpg') no-repeat center
+  background-size cover
+  color $white
+  & .abs-center
+    width 66%
+    max-width 720px
+  &::before
+    content ""
+    position absolute
+    height 100%
+    width 100%
+    background-color rgba(0,0,0,0.4)

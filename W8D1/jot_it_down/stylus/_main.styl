@@ -1,0 +1,70 @@
+// out: ../styles.css
+
+// Evernote Colors
+$green = #02A82D;
+$light-green = #14CC45;
+$white = #FFF;
+$background = #F7F7F7;
+$lite = #EEE;
+$light-grey = #CCC;
+$grey = #888B8D;
+$dark-grey = #333;
+$black = #000;
+
+*
+  box-sizing border-box
+  transition 0.33s cubic-bezier(0.6,0,0.2,1)
+
+body
+  background-color $background
+  color $dark-grey
+  padding-top 100px // for nav-bar
+  font-family 'Open Sans', Helvetivca, sans-serif
+  font-size 14px
+
+.hidden
+  display none
+
+.rela-block
+  display block
+  position relative
+
+.rela-inline
+  display inline-block
+  position relative
+
+.abs-center
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+
+.gutter-container
+  max-width 1100px
+  margin 0 auto
+  padding 0 40px
+
+.logo
+  display inline-block
+  height 60px
+  width @height
+  margin 20px 20px 20px 0
+  vertical-align middle
+  background url('img/logo.png') no-repeat center
+  background-size cover
+  cursor pointer
+
+.button
+  min-width 180px
+  padding 20px 36px
+  background-color $white
+  color $green
+  text-align center
+  border-radius 4px
+  cursor pointer
+  &:hover
+    background-color $lite
+
+@import 'fonts.styl';
+@import 'navbar.styl';
+@import 'splash_page.styl';
